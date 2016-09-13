@@ -5,13 +5,14 @@
 1.升级至最新版本
 
 $sudo gem install cocoa pods //完成注册 邮箱和GitHub用户名字
-pod trunk register “邮箱” “密码” --verbose // 之后点击邮箱链接进行验证
+     pod trunk register “邮箱” “密码” --verbose // 之后点击邮箱链接进行验证
+     
 2.查看注册信息如图
+    pod trunk me
 
-pod trunk me
 3.创建 .spec文件
+    pod spec create xxx //xxx库名字
 
-pod spec create xxx //xxx库名字
 4.编辑文件 .spec文件
 
     Pod::Spec.new do |s|
@@ -28,15 +29,15 @@ pod spec create xxx //xxx库名字
     end
 
 5.验证一下本地文件编写是否正确
+    pod lib lint xxx.podspec
 
-pod lib lint xxx.podspec
 6.把编辑好的文件推送到GitHub (库文件 和 .spec文件)(使用GitHub Desktop就可以) 并且打上标记
+    git tag '1.0.1'
+    git push --tags
 
-git tag '1.0.1'
-git push --tags
 7.把编写的文件告诉Cocoapods
+    pod trunk push xxx.podspec
 
-pod trunk push xxx.podspec
 8.查找命令
 
 pod search xxx
