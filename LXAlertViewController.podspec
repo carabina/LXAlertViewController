@@ -8,5 +8,6 @@ s.homepage = 'https://github.com/gao520sun/LXAlertViewController'
 s.authors = { 'gaozhonglei' => '406243283@qq.com' }
 s.source = { :git => 'https://github.com/gao520sun/LXAlertViewController.git', :tag => s.version.to_s }
 s.requires_arc = true
-s.ios.deployment_target = '7.0'
+s.ios.deployment_target = '8.0'
+s.source_files = 'LXAlertViewController/*.{h,m}'
 end
